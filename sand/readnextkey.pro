@@ -1,0 +1,1 @@
+function readnextkey, unit	s=''	lat=0.	lon=0.	startyr=0		if eof(unit) then return, -1	readf, unit, s	data = strsplit(s,/extract)		if n_elements(data) ne 4 then return, -1	fname=data[0]	reads, data[1],lat	reads, data[2],lon	reads, data[3],startyr	result= {name: 'wthdat', wth:fname,lat:lat/100, lon:lon/100,startyr:startyr}	return, resultend

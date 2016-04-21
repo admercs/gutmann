@@ -1,0 +1,1 @@
+pro centadj, cent, ns, nl, nb, out, factor=factorif not keyword_set(factor) then factor=2openr, un, /get, centopenw, oun, /get, outband=fltarr(ns, nl)for i=0, nb-1 do begin	readu, un, band	ybar=mean(band)	band=band-ybar	band=band/factor	band=band+ybar	writeu, oun, bandendforclose, oun, unfree_lun, oun, unend

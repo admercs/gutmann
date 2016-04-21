@@ -1,0 +1,1 @@
+function getdata, un	speed = 0	result=0	while not eof(un) do begin		s=''		readf, un, s		s=strsplit(s,/extract)		if n_elements(s) gt 4 then begin			reads, s(3), speed			result = [result, speed]		endif	endwhile		return, result(1:n_elements(result)-1)end

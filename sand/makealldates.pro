@@ -1,0 +1,1 @@
+pro makealldates, output	openw, un, /get, output	for year=1985, 1999 do begin		for month = 1,12 do begin			printf, un, year, month, 1		endfor	endfor		close, un	free_lun, unend

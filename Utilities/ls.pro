@@ -1,0 +1,1 @@
+pro ls, pat=pat	if not keyword_set(pat) then pat='*'	i= file_search(pat)	for j=0, n_elements(i)-1, 2 do begin		if j+1 ne n_elements(i) then begin			print, i(j), '                   ', i(j+1)		endif else	 print, i(j)	endfor	print, n_elements(i)end

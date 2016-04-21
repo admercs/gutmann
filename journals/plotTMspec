@@ -1,0 +1,95 @@
+; IDL Version 5.2.1 (sunos sparc)
+; Journal File for gutmann@sundog
+; Working directory: /photon/plains/airport_spectra/tm/sterling
+; Date: Fri Oct  1 11:13:53 1999
+; used as template to plot all tmspectra to a ps file for printing
+ 
+;; set output to a postscript file
+set_plot, "ps"
+
+
+;;cd into stapleton
+cd, "stapleton"
+
+;; load ascii text into arrays
+print, load_cols("85_08_12.cal.spec", s85_12)
+print, load_cols("85_08_28.cal.spec", s85_28)
+print, load_cols("89_09_24.cal.spec", s89)
+print, load_cols("96_08_10.cal.spec", s96)
+
+;;plot wavelength vs reflectance for all files 
+
+plot, xtitle="!17Wavelength", ytitle="reflectance", title="Stapleton TM Spectra", s85_28(0,*), s85_12(3,*), xrange=[0.4, 2.3], /xstyle
+oplot, s85_28(0,*), s89(3, *), line=1
+oplot, s85_28(0,*), s96(3, *), line=2
+oplot, s85_28(0,*), s85_28(3, *), line=3
+
+;; change back to the original directory
+cd, "../"
+
+
+
+;; change into the directory in which sterling spectra are stored
+cd, "sterling"	
+
+;; load ascii text into arrays
+print, load_cols("85_08_12.cal.spec", s85_12)
+print, load_cols("85_08_28.cal.spec", s85_28)
+print, load_cols("89_09_24.cal.spec", s89)
+print, load_cols("96_08_10.cal.spec", s96)
+
+;;plot wavelength vs reflectance for all files 
+
+plot, xtitle="!17Wavelength", ytitle="reflectance", title="Sterling TM Spectra", s85_28(0,*), s85_12(3,*), xrange=[0.4, 2.3], /xstyle
+oplot, s85_28(0,*), s89(3, *), line=1
+oplot, s85_28(0,*), s96(3, *), line=2
+oplot, s85_28(0,*), s85_28(3, *), line=3
+
+;; change back to the original directory
+cd, "../"
+
+
+
+
+
+;; cd into gardencity
+cd, "gardencity"
+
+;; load ascii text into arrays
+print, load_cols("85_08_07.cal.spec", s85)
+print, load_cols("88_08_15.cal.spec", s89)
+print, load_cols("96_08_05.cal.spec", s96)
+
+;;plot wavelength vs reflectance for all files 
+
+plot, xtitle="!17Wavelength", ytitle="reflectance", title="GardenCity TM Spectra", s85_28(0,*), s85(3,*), xrange=[0.4, 2.3], /xstyle
+oplot, s85_28(0,*), s89(3, *), line=1
+oplot, s85_28(0,*), s96(3, *), line=2
+
+;; change back to the original directory
+cd, "../"
+
+
+
+
+
+;; cd into dalhart directory
+cd, "dalhart"
+
+;; load ascii text into arrays
+print, load_cols("85_08_30.cal.spec", s85)
+print, load_cols("89_09_26.cal.spec", s89)
+print, load_cols("96_08_12.cal.spec", s96)
+
+;;plot wavelength vs reflectance for all files 
+
+plot, xtitle="!17Wavelength", ytitle="reflectance", title="Dalhart TM Spectra", s85_28(0,*), s85(3,*), xrange=[0.4, 2.3], /xstyle
+oplot, s85_28(0,*), s89(3, *), line=1
+oplot, s85_28(0,*), s96(3, *), line=2
+
+
+;; change back to the original directory
+cd, "../"
+
+
+exit

@@ -1,0 +1,84 @@
+% Interrupt encountered.
+% Interrupted at:  SUBGLT             30 /photon/users/gutmann/idl/subglt.pro
+IDL> .run subglt
+% Procedure was compiled while active: SUBGLT. Returning.
+% Compiled module: SUBGLT.
+IDL> subglt, 'glt/r2.glt', 5536, 2686, 4097, 4608, 'glt/2r2s9.glt'
+IDL> .run subglt
+% Compiled module: SUBGLT.
+IDL> subglt, 'glt/r2.glt', 5536, 2686, 4097, 4608, 'glt/r2s9.glt'
+IDL> .run subglt
+% Compiled module: SUBGLT.
+IDL> subglt, 'glt/r2.glt', 5536, 2686, 4097, 4608, 'glt/r2s9.glt'
+% Keyword SWAP not allowed in call to: READU
+% Execution halted at:  SUBGLT             26
+  /photon/users/gutmann/idl/subglt.pro
+%                       $MAIN$                 
+IDL> .run subglt
+% Procedure was compiled while active: SUBGLT. Returning.
+% Compiled module: SUBGLT.
+IDL> subglt, 'glt/r2.glt', 5536, 2686, 4097, 4608, 'glt/r2s9.glt'
+IDL> subglt, 'glt/r3.glt', 1619, 2815, 2049, 2560, 'glt/r3s5.glt'
+IDL> geocorrect_glt, 'avfiles/nobrdf/convr2s9.bip', 614, 512, 6, 4097, 'glt/r2s9.glt', 788, 788, 'avfiles/nobrdf/geor2s9.bip'
+IDL> geocorrect_glt, 'avfiles/nobrdf/convr2s9.bip', 614, 512, 6, 4097, 'glt/r2s9 geocorrect_glt, 'avfiles/nobrdf/convr2s9.bip', 614, 512, 6, 4097, 'glt/r2s9.gltIDL> geocorrect_glt, 'avfiles/nobrdf/convr2s9.bip', 614, 512, 6, , 'glt/r2s5.gltgeocorrect_glt, 'avfiles/nobrdf/convr3s9.bip', 614, 512, 6, , 'glt/r2s5.glt', 80IDL> geocorrect_glt, 'avfiles/nobrdf/convr3s5.bip', 614, 512, 6, , 'glt/r2s5.gltIDL> geocorrect_glt, 'avfiles/nobrdf/convr3s5.bip', 614, 512, 6, , 'glt/r2s5.gltIDL> geocorrect_glt, 'avfiles/nobrdf/convr3s5.bip', 614, 512, 6, 2, 'glt/r2s5.gl049, 'glt/r3s5.glt', 800, 736, 'avfiles/nobrdf/geor3s5.bip'
+IDL> bipTobsq, 'avfiles/nobrdf/geor3s5.bip', 'avfiles/nobrdf/geor3s5.bsq', 800, 736, 6
+% Attempt to call undefined procedure/function: 'BIPTOBSQ'.
+% Execution halted at:  $MAIN$                 
+IDL> .run bipTobsq
+% Compiled module: BIPTOBSQ.
+IDL> bipTobsq, 'avfiles/nobrdf/geor3s5.bip', 'avfiles/nobrdf/geor3s5.bsq', 800, 736, 6
+IDL> bipTobsq, 'avfiles/nobrdf/geor3s5.bip', 'avfiles/nobrdf/geor3s5.bsq', 800, bipTobsq, 'avfiles/nobrdf/geor2s5.bip', 'avfiles/nobrdf/geor3s5.bsq', 800, 788, IDL> bipTobsq, 'avfiles/nobrdf/geor2s9.bip', 'avfiles/nobrdf/geor3s5.bsq', 800, IDL> bipTobsq, 'avfiles/nobrdf/geor2s9.bip', 'avfiles/nobrdf/geor2s5.bsq', 800, s9.bsq', 788, 788, 6
+IDL> .run ungeocorrect
+% Compiled module: UNGEOCORRECT.
+IDL> ungeocorrect, 'lsfiles/unwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736, 'lsfiles/ungltr3.bip'
+% READU: End of file encountered. Unit: 117
+         File: lsfiles/unwr3.bip
+% Execution halted at:  UNGEOCORRECT       45
+  /photon/users/gutmann/idl/ungeocorrect.pro
+%                       $MAIN$                 
+IDL> ungeocorrect, 'lsfiles/unwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, IDL> .run ungeocorrect
+% Procedure was compiled while active: UNGEOCORRECT. Returning.
+% Compiled module: UNGEOCORRECT.
+IDL> ungeocorrect, 'lsfiles/unwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736, 'lsfiles/ungltr3.bip'
+IDL> ungeocorrect, 'lsfiles/unwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736, 'lsfiles/ungltr3.bip'
+% Interrupt encountered.
+% Interrupted at:  UNGEOCORRECT       42 /photon/users/gutmann/idl/ungeocorrect
+  .pro
+IDL> ungeocorrect, 'lsfiles/unwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, ungeocorrect, 'lsfiles/runwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736,IDL> ungeocorrect, 'lsfiles/rsunwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800IDL> ungeocorrect, 'lsfiles/rsunwr3.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736, 'lsfiles/ungltr3.bip'
+IDL> ungeocorrect, 'lsfiles/rsunwr2.bip', 614, 512, 6, 4097, 'glt/r2s9.glt', 788, 788, 'lsfiles/ungltr2.bip'
+IDL> .run ratioslopeCalc
+% Compiled module: RATIOSLOPECALC.
+IDL> ratioslopeCalc, 'ratiocalcimg/avr2.bsq', 'ratiocalcimg/lsr2.bsq', 614, 512, 6, 'ratiocalcimg/r2.ps'
+       0
+% Compiled module: REGRESS.
+       1
+       2
+       3
+       4
+       5
+    0.0858837    0.0862836     0.133058     0.202535     0.226408     0.211732
+      730.231      1091.20      1238.64      2893.90      3133.06      2151.22
+IDL> ratioslopeCalc, 'ratiocalcimg/avr2.bsq', 'ratiocalcimg/lsr2.bsq', 614, 512,IDL> ratioslopeCalc, 'ratiocalcimg/avr3.bsq', 'ratiocalcimg/lsr3.bsq', 614, 512,.bsq', 614, 512, 6, 'ratiocalcimg/r3.ps'
+       0
+       1
+       2
+       3
+       4
+       5
+    -0.552852    -0.552135    -0.517518    -0.702932    -0.713192    -0.547290
+      1051.12      1414.27      1712.10      2828.51      3667.35      2675.88
+IDL> .run RoughBRDF
+% Compiled module: ROUGHBRDF.
+IDL> RouchBRDF, 'avfiles/nobrdf/convr3s5.bip', 'r3slopes', 'avfiles/brdf/r3base.bip', 614, 512, 6
+% Attempt to call undefined procedure/function: 'ROUCHBRDF'.
+% Execution halted at:  UNGEOCORRECT       42
+  /photon/users/gutmann/idl/ungeocorrect.pro
+%                       $MAIN$                 
+IDL> RouchBRDF, 'avfiles/nobrdf/convr3s5.bip', 'r3slopes', 'avfiles/brdf/r3base.RoughBRDF, 'avfiles/nobrdf/convr3s5.bip', 'r3slopes', 'avfiles/brdf/r3base.bip',IDL> Roug, 6
+% OPENW: All available logical units are currently in use.
+% Execution halted at:  ROUGHBRDF          23
+  /photon/users/gutmann/idl/RoughBRDF.pro
+%                       UNGEOCORRECT       42
+  /photon/users/gutmann/idl/ungeocorrect.pro
+%                       $MAIN$                 
+IDL> 

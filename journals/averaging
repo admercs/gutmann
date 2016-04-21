@@ -1,0 +1,67 @@
+; IDL Version 5.1.1 (sunos sparc)
+; Journal File for gutmann@khroma
+; Working directory: /photon/plains/airport_spectra/stapleton
+; Date: Wed Oct  6 13:07:54 1999
+ 
+read_raw_spec, '8_15_98/raw/REFL', 0, 36, spec1
+print spec1
+; % Syntax error.
+print, spec1
+;     0.117761     0.126486     0.123562     0.132621     0.157858     0.161323
+;     0.148027     0.162916     0.161975     0.172267     0.172012     0.178746
+;     0.172380     0.173739     0.180611     0.189432     0.194745     0.197869
+;     0.112934     0.111705     0.125018     0.128876     0.128251     0.127768
+;     0.135425     0.138377     0.145749     0.159781     0.160187     0.153409
+;     0.167813     0.170114     0.175275     0.177034     0.174277     0.176925
+;     0.988002
+
+...
+
+;     280
+;     281
+;     282
+;     283
+;     284
+;     285
+;     286
+
+for i=0, 286 do begin plot, spec97(i, *), yrange=[0,1.5]& wait, 0.5 & print, i&end
+ave97= total(spec97, 1)
+ave97 = ave97/286
+help
+plot ave97
+; % PLOT: Incorrect number of arguments.
+; % Syntax error.
+plot, ave97
+help
+plot, ave98
+; % PLOT: Expression must be an array in this context: AVE98.
+plot, ave
+openw, 1, '97ave'
+for i=0, 2150, do printf, 1, i+350, ave97(i)
+; % Syntax error.
+for i=0, 2150 do printf, 1, i+350, ave97(i)
+close, 1
+print, load_cols('9_12_99/LightHouse/Average')
+;           2
+help
+print, load_cols('9_12_99/LightHouse/Average', ave99)
+;           2
+plot, ave99
+plot, ave99(0, *), ave99(1,*)
+oplot, ave99(0, *), ave
+oplot, ave99(0, *), ave97
+set_plot, 'ps'
+plot, ave99(0, *), ave99(1,*)
+oplot, ave99(0, *), ave
+oplot, ave99(0, *), ave97
+device, /close
+plot, ave99(0, *), ave99(1,*)
+oplot, ave99(0, *), ave, line=1
+oplot, ave99(0, *), ave97, line=1
+set_plot, 'x'
+plot, ave99(0, *), ave99(1,*)
+oplot, ave99(0, *), ave, line=1
+oplot, ave99(0, *), ave97, line=1
+quit
+; % Attempt to call undefined procedure/function: 'QUIT'.

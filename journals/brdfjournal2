@@ -1,0 +1,29 @@
+IDL> .run RoughBRDF
+% Compiled module: ROUGHBRDF.
+IDL> RoughBRDF, 'avfiles/nobrdf/convr3s5.bip', 'r3slopes', 'avfiles/brdf/r3base.bip', 614, 512, 6
+% Compiled module: LOAD_COLS.
+IDL> RoughBRDF, 'avfiles/nobrdf/convr3s5.bip', 'r3slopes', 'avfiles/brdf/r3base.IDL> RoughBRDF, 'avfiles/nobrdf/convr2s9.bip', 'r2slopes', 'avfiles/brdf/r2base.bip', 614, 512, 6
+IDL> .run geocorrect_avcub
+% Can't open file for input: geocorrect_avcub
+  No such file or directory
+IDL> .run geocorrect_glt
+% Compiled module: GEOCORRECT_GLT.
+IDL> geocorrect_glt, 'avfiles/brdf/r2base.bip', 614, 512, 6, 4097, 'glt/r2s9.glt', 788, 788, 'avfiles/brdf/geor2.bip'
+IDL> geocorrect_glt, 'avfiles/brdf/r3base.bip', 614, 512, 6, 2049, 'glt/r2s9.glt', 788, 788, 'avfiles/brdf/geor2.bip'
+% READU: End of file encountered. Unit: 100
+         File: avfiles/brdf/r3base.bip
+% Execution halted at:  GEOCORRECT_GLT     37
+  /photon/users/gutmann/idl/geocorrect_glt.pro
+%                       $MAIN$                 
+IDL> geocorrect_glt, 'avfiles/brdf/r3base.bip', 614, 512, 6, 2049, 'glt/r2s9.glt6, 2049, 'glt/r3s5.glt', 800, 736, 'avfiles/brdf/geor3.bip'
+% Type conversion error: Unable to convert given STRING to Long.
+% Detected at:  GEOCORRECT_GLT     17 /photon/users/gutmann/idl/geocorrect_glt.
+  pro
+% Array dimensions must be greater than 0.
+% Execution halted at:  GEOCORRECT_GLT     17
+  /photon/users/gutmann/idl/geocorrect_glt.pro
+%                       GEOCORRECT_GLT     37
+  /photon/users/gutmann/idl/geocorrect_glt.pro
+%                       $MAIN$                 
+IDL> geocorrect_glt, 'avfiles/brdf/r3base.bip', 6, 2049, 'glt/r3s5.glt', 800, 73IDL> geocorrect_glt, 'avfiles/brdf/r3base.bip', 614, 512, 6, 2049, 'glt/r3s5.glt', 800, 736, 'avfiles/brdf/geor3.bip'
+IDL> 

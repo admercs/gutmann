@@ -1,0 +1,27 @@
+; IDL Version 5.2.1 (sunos sparc)
+; Journal File for gutmann@sundog
+; Working directory: /photon/plains/airport_spectra/stapleton/9_12_99/LightHouse
+; Date: Fri Oct  1 17:00:05 1999
+ 
+openr, 1, "Average"
+ave = fltarr(2, 2151)
+readf, 1, ave
+print, ave
+;      350.000     0.284218
+;      351.000     0.215106
+;      352.000    0.0707299
+;      353.000      0.00000
+;      354.000     0.477362
+
+...
+
+;      2497.00     0.258413
+;      2498.00     0.259662
+;      2499.00     0.260315
+;      2500.00     0.259752
+plot, title="Stapleton 1999 Average Ground Spectrum!17", xtitle="Wavelength", ytitle="Reflectance", xrange=(300, 2550), /xstyle, ave(0,*), ave(1,*)
+; % Syntax error.
+plot, title="Stapleton 1999 Average Ground Spectrum!17", xtitle="Wavelength", ytitle="Reflectance", xrange=[300, 2550], /xstyle, ave(0,*), ave(1,*)
+set_plot, "ps"
+plot, title="Stapleton 1999 Average Ground Spectrum!17", xtitle="Wavelength", ytitle="Reflectance", xrange=[300, 2550], /xstyle, ave(0,*), ave(1,*)
+close, 1

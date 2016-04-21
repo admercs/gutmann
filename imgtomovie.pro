@@ -1,0 +1,1 @@
+pro imgtomovie, name	read_jpeg, name, img		s=size(img)	yshift = s(3)-480	midx = s(2)/2	minx = midx-(720/2)	maxx = minx+720	print, yshift/10	for i=0, yshift-10, 10 do begin		newimg = img(*, minx:maxx, i:i+480)		outname = strcompress(i, /remove_all)+'.jpg'		print, outname		write_jpeg, outname, newimg, true=1		print, outname	endfor	end

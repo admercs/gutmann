@@ -1,0 +1,1 @@
+function lowpass, array	result=array	x = (size(array))(1) - 2	y = (size(array))(2) - 2		for i=1, x do begin		for j=1,y do begin			result(i,j) = mean(array(i-1:i+1,j-1:j+1))		endfor	endfor		return, result	end
